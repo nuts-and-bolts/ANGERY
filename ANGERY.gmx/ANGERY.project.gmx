@@ -6,6 +6,11 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprites name="Charge Bar">
+      <sprite>sprites\spr_chargebar_foreground</sprite>
+      <sprite>sprites\spr_chargebar_content</sprite>
+      <sprite>sprites\spr_chargebar_background</sprite>
+    </sprites>
     <sprites name="UI">
       <sprite>sprites\sprite0_VIDA_10</sprite>
       <sprite>sprites\sprite2_VIDA_HIT</sprite>
@@ -17,7 +22,13 @@
     <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\fTimer</font>
+  </fonts>
   <objects name="objects">
+    <object>objects\oTimer</object>
+    <object>objects\oTimerGUI</object>
+    <object>objects\oContMain</object>
     <objects name="Controllers">
       <object>objects\controller_main</object>
     </objects>
@@ -25,6 +36,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\timerRoom</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
