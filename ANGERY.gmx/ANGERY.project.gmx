@@ -5,9 +5,25 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprites name="UI">
+      <sprite>sprites\sprite0_VIDA_10</sprite>
+      <sprite>sprites\sprite2_VIDA_HIT</sprite>
+    </sprites>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\Ocean</background>
+  </backgrounds>
   <paths name="paths"/>
+  <objects name="objects">
+    <objects name="Controllers">
+      <object>objects\controller_main</object>
+    </objects>
+    <object>objects\object2</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\room0</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
