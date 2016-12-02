@@ -80,8 +80,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\main_menu</room>
-    <room>rooms\room0</room>
+    <room>rooms\game_room</room>
     <room>rooms\timerRoom</room>
+    <room>rooms\game_over</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

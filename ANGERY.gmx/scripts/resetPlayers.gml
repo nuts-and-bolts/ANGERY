@@ -13,4 +13,8 @@ global.p2Input[0] = 0;
 global.p1_isMoving = false;
 global.p2_isMoving = false;
 
+//Make player sprites jump back to original position
+position_change(bear.xstart, bear.ystart, bear, false);
+position_change(fox.xstart, fox.ystart, fox, false);
+
 global.seconds = 16;

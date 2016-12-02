@@ -34,6 +34,12 @@ global.p2Input[2] = 0;
 global.p1ComdCt = -1;
 global.p2ComdCt = -1;
 
+// Original positions of player sprites
+global.p1OriPosX = bear.x;
+global.p1OriPosY = bear.y;
+global.p2OriPosX = fox.x;
+global.p2OriPosY = fox.y;
+
 global.Bar1 = 0;
 global.Bar2 = 0;
 
@@ -69,14 +75,27 @@ if(global.seconds &lt; 0.1) and (global.seconds &gt; 0){
     global.p1Health = damage(global.p1Health, myAlgo(output[1]));
     global.p2Health = damage(global.p2Health, myAlgo(output[0]));
     
-    resetPlayers();
+    if (isDead(global.p1Health) or isDead(global.p2Health)){
+        //trigger death animation and game over
+        room_goto(game_over); 
+    }else{
+        resetPlayers();
+    }
+    
 } else if (global.p1ComdCt == 2 and global.p2ComdCt == 2){
     output = fight(global.p1Input, global.p2Input);
     global.p1Health = damage(global.p1Health, myAlgo(output[1]));
     global.p2Health = damage(global.p2Health, myAlgo(output[0]));
     
-    resetPlayers();
+    if (isDead(global.p1Health) or isDead(global.p2Health)){
+        //trigger death animation and game over
+        room_goto(game_over); 
+    }else{
+        resetPlayers();
+    }
 }
+
+
 </string>
           </argument>
         </arguments>
