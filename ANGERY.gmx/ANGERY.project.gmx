@@ -6,14 +6,7 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\bear_walkR</sprite>
-    <sprite>sprites\bear_walkL</sprite>
-    <sprite>sprites\bear_staticR</sprite>
-    <sprite>sprites\bear_staticL</sprite>
     <sprite>sprites\collision</sprite>
-    <sprite>sprites\fox_left</sprite>
-    <sprite>sprites\foxStaticLeft</sprite>
-    <sprite>sprites\bear_smash</sprite>
     <sprites name="Charge Bar">
       <sprite>sprites\spr_chargebar_foreground</sprite>
       <sprite>sprites\spr_chargebar_content</sprite>
@@ -23,6 +16,26 @@
       <sprite>sprites\sprite0_VIDA_10</sprite>
       <sprite>sprites\sprite2_VIDA_HIT</sprite>
       <sprite>sprites\Wooden_Platform</sprite>
+    </sprites>
+    <sprite>sprites\menu_button</sprite>
+    <sprite>sprites\game_title</sprite>
+    <sprites name="Fox">
+      <sprite>sprites\fox_uppercut</sprite>
+      <sprite>sprites\fox_kick</sprite>
+      <sprite>sprites\fox_zap</sprite>
+      <sprite>sprites\fox_left</sprite>
+      <sprite>sprites\fox_menu</sprite>
+      <sprite>sprites\foxStaticLeft</sprite>
+    </sprites>
+    <sprites name="Bear">
+      <sprite>sprites\bear_punch</sprite>
+      <sprite>sprites\bear_walkR</sprite>
+      <sprite>sprites\bear_walkL</sprite>
+      <sprite>sprites\bear_kick</sprite>
+      <sprite>sprites\bear_staticL</sprite>
+      <sprite>sprites\bear_staticR</sprite>
+      <sprite>sprites\bear_smash</sprite>
+      <sprite>sprites\bear_menu</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -34,7 +47,7 @@
     <font>fonts\fTimer</font>
   </fonts>
   <objects name="objects">
-    <object>objects\object0</object>
+    <object>objects\bear</object>
     <object>objects\collision1</object>
     <object>objects\fox</object>
     <object>objects\oTimer</object>
@@ -44,11 +57,16 @@
       <object>objects\controller_main</object>
     </objects>
     <object>objects\object2</object>
+    <object>objects\object9</object>
+    <object>objects\start_button</object>
+    <object>objects\gameTitle</object>
+    <object>objects\foxMenu</object>
+    <object>objects\bearMenu</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
-    <room>rooms\timerRoom</room>
+    <room>rooms\main_menu</room>
     <room>rooms\room0</room>
+    <room>rooms\timerRoom</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
