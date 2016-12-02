@@ -28,22 +28,16 @@
             <string>global.p1Health = 10;
 global.p2Health = 10;
 
-global.p1ComdCt = 0;
-global.p2ComdCt = 0;
-
-//ROCK =&gt; 1, SCISSORS =&gt; 2, PAPER =&gt; 3, NOTHING =&gt; 0
 global.p1Input[2] = 0;
-global.p1Input[1] = 0;
-global.p1Input[0] = 0;
-
 global.p2Input[2] = 0;
-global.p2Input[1] = 0;
-global.p2Input[0] = 0;
+
+global.p1ComdCt = -1;
+global.p2ComdCt = -1;
 
 global.Bar1 = 0;
 global.Bar2 = 0;
 
-global.seconds = 16;
+resetPlayers();
 </string>
           </argument>
         </arguments>
@@ -75,16 +69,41 @@ if(global.seconds &lt; 0.1) and (global.seconds &gt; 0){
     global.p1Health = damage(global.p1Health, myAlgo(output[1]));
     global.p2Health = damage(global.p2Health, myAlgo(output[0]));
     
-    global.p1Input[2] = 0;
-    global.p1Input[1] = 0;
-    global.p1Input[0] = 0;
-
-    global.p2Input[2] = 0;
-    global.p2Input[1] = 0;
-    global.p2Input[0] = 0;
+    resetPlayers();
+} else if (global.p1ComdCt == 2 and global.p2ComdCt == 2){
+    output = fight(global.p1Input, global.p2Input);
+    global.p1Health = damage(global.p1Health, myAlgo(output[1]));
+    global.p2Health = damage(global.p2Health, myAlgo(output[0]));
     
-    global.seconds = 16;
-} 
+    resetPlayers();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_sprite(sprite2_VIDA_HIT,1,view_xview[0], view_yview[0]);
+draw_sprite_ext(sprite0_VIDA_10,1,view_xview[0], view_yview[0],global.p1Health/10,1,0,c_white,1); //global.p1Health/10
+draw_sprite(sprite2_VIDA_HIT,1,view_xview[0]+645, view_yview[0]);
+draw_sprite_ext(sprite0_VIDA_10,1,view_xview[0]+1023, view_yview[0],-global.p2Health/10,1,0,c_white,1); //global.p2Health/10
+
 </string>
           </argument>
         </arguments>

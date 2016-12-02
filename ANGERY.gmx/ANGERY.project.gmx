@@ -54,6 +54,9 @@
     <script>scripts\resolution.gml</script>
     <script>scripts\fight.gml</script>
     <script>scripts\myAlgo.gml</script>
+    <script>scripts\throwSign.gml</script>
+    <script>scripts\resetPlayers.gml</script>
+    <script>scripts\stopObstacle.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fTimer</font>
@@ -65,9 +68,6 @@
     <object>objects\fox</object>
     <object>objects\oTimerGUI</object>
     <object>objects\oChargeBar</object>
-    <objects name="Controllers">
-      <object>objects\controller_main</object>
-    </objects>
     <object>objects\menuSound</object>
     <object>objects\gameSound</object>
     <objects name="menu">
