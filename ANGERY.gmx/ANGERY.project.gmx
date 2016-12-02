@@ -30,6 +30,13 @@
     <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\isDead.gml</script>
+    <script>scripts\damage.gml</script>
+    <script>scripts\resolution.gml</script>
+    <script>scripts\fight.gml</script>
+    <script>scripts\myAlgo.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\fTimer</font>
   </fonts>
@@ -44,11 +51,12 @@
       <object>objects\controller_main</object>
     </objects>
     <object>objects\object2</object>
+    <object>objects\GameController</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room0</room>
     <room>rooms\room1</room>
     <room>rooms\timerRoom</room>
-    <room>rooms\room0</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
