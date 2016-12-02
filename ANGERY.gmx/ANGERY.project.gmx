@@ -5,9 +5,26 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="Charge Bar">
+      <sprite>sprites\spr_chargebar_foreground</sprite>
+      <sprite>sprites\spr_chargebar_content</sprite>
+      <sprite>sprites\spr_chargebar_background</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\fTimer</font>
+  </fonts>
+  <objects name="objects">
+    <object>objects\oTimer</object>
+    <object>objects\oTimerGUI</object>
+    <object>objects\oContMain</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\timerRoom</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
