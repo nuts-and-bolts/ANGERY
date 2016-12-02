@@ -51,9 +51,10 @@
             <kind>1</kind>
             <string>//decrease time
 global.seconds -= 1/room_speed;
-var output;
+output[2] = 0;
 
 if(global.seconds &lt; 0.1) and (global.seconds &gt; 0){
+    global.p1Health -= 1;
     output = fight(global.p1Input, global.p2Input);
     global.p1Health = damage(global.p1Health, myAlgo(output[1]));
     global.p2Health = damage(global.p2Health, myAlgo(output[0]));

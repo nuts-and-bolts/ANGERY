@@ -1,5 +1,8 @@
 var p1I, p2I;
 
+p1I = argument0;
+p2I = argument1;
+
 if (p1I==p2I){
     return 0;
 }else if (p1I = 0){

@@ -54,22 +54,19 @@
     <font>fonts\fTimer</font>
   </fonts>
   <objects name="objects">
+    <object>objects\GameController</object>
     <object>objects\bear</object>
     <object>objects\collision1</object>
     <object>objects\fox</object>
-    <object>objects\oTimer</object>
     <object>objects\oTimerGUI</object>
-    <object>objects\oContMain</object>
+    <object>objects\oChargeBar</object>
     <objects name="Controllers">
       <object>objects\controller_main</object>
     </objects>
-    <object>objects\object2</object>
-    <object>objects\object9</object>
     <object>objects\start_button</object>
     <object>objects\gameTitle</object>
     <object>objects\foxMenu</object>
     <object>objects\bearMenu</object>
-    <object>objects\GameController</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\main_menu</room>
