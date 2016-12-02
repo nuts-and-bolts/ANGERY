@@ -14,16 +14,39 @@
     <sprite>sprites\fox_left</sprite>
     <sprite>sprites\foxStaticLeft</sprite>
     <sprite>sprites\bear_smash</sprite>
+    <sprites name="Charge Bar">
+      <sprite>sprites\spr_chargebar_foreground</sprite>
+      <sprite>sprites\spr_chargebar_content</sprite>
+      <sprite>sprites\spr_chargebar_background</sprite>
+    </sprites>
+    <sprites name="UI">
+      <sprite>sprites\sprite0_VIDA_10</sprite>
+      <sprite>sprites\sprite2_VIDA_HIT</sprite>
+    </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\Ocean</background>
+  </backgrounds>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\fTimer</font>
+  </fonts>
   <objects name="objects">
     <object>objects\object0</object>
     <object>objects\collision1</object>
     <object>objects\fox</object>
+    <object>objects\oTimer</object>
+    <object>objects\oTimerGUI</object>
+    <object>objects\oContMain</object>
+    <objects name="Controllers">
+      <object>objects\controller_main</object>
+    </objects>
+    <object>objects\object2</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
+    <room>rooms\timerRoom</room>
+    <room>rooms\room0</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
