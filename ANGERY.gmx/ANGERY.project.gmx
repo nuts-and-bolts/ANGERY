@@ -4,7 +4,10 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\gameBgm</sound>
+    <sound>sound\menu_bgm</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\collision</sprite>
     <sprites name="Charge Bar">
@@ -18,6 +21,7 @@
       <sprite>sprites\Wooden_Platform</sprite>
     </sprites>
     <sprite>sprites\menu_button</sprite>
+    <sprite>sprites\demo</sprite>
     <sprite>sprites\game_title</sprite>
     <sprites name="Fox">
       <sprite>sprites\fox_uppercut</sprite>
@@ -41,6 +45,7 @@
   <backgrounds name="background">
     <background>background\Ocean</background>
     <background>background\background1</background>
+    <background>background\menu_background</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -63,18 +68,20 @@
     <objects name="Controllers">
       <object>objects\controller_main</object>
     </objects>
-    <object>objects\object2</object>
-    <object>objects\object9</object>
-    <object>objects\start_button</object>
-    <object>objects\gameTitle</object>
-    <object>objects\foxMenu</object>
-    <object>objects\bearMenu</object>
     <object>objects\GameController</object>
+    <object>objects\menuSound</object>
+    <object>objects\gameSound</object>
+    <objects name="menu">
+      <object>objects\gameTitle</object>
+      <object>objects\demoWord</object>
+      <object>objects\bearMenu</object>
+      <object>objects\foxMenu</object>
+      <object>objects\start_button</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\main_menu</room>
     <room>rooms\room0</room>
-    <room>rooms\room1</room>
     <room>rooms\timerRoom</room>
   </rooms>
   <help>
