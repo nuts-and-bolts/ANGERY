@@ -5,9 +5,26 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\bear_walkR</sprite>
+    <sprite>sprites\bear_walkL</sprite>
+    <sprite>sprites\bear_staticR</sprite>
+    <sprite>sprites\bear_staticL</sprite>
+    <sprite>sprites\collision</sprite>
+    <sprite>sprites\fox_left</sprite>
+    <sprite>sprites\foxStaticLeft</sprite>
+    <sprite>sprites\bear_smash</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\object0</object>
+    <object>objects\collision1</object>
+    <object>objects\fox</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\room0</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
