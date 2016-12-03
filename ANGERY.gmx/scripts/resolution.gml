@@ -25,6 +25,6 @@ if (p1I==p2I){
 }else if (p1I == 2 and p2I == 3){
     return 1;
     //p1 PAPER p2 SCISSORS
-}else if (p1I == 3 and p1I == 2){
+}else if (p1I == 3 and p2I == 2){
     return -1;
 }

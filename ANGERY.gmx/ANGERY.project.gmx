@@ -9,6 +9,7 @@
     <sound>sound\menu_bgm</sound>
   </sounds>
   <sprites name="sprites">
+    <sprite>sprites\collider2</sprite>
     <sprite>sprites\collision</sprite>
     <sprites name="Charge Bar">
       <sprite>sprites\spr_chargebar_foreground</sprite>
@@ -30,6 +31,7 @@
       <sprite>sprites\fox_left</sprite>
       <sprite>sprites\fox_menu</sprite>
       <sprite>sprites\foxStaticLeft</sprite>
+      <sprite>sprites\fox_jump</sprite>
     </sprites>
     <sprites name="Bear">
       <sprite>sprites\bear_punch</sprite>
@@ -40,7 +42,10 @@
       <sprite>sprites\bear_staticR</sprite>
       <sprite>sprites\bear_smash</sprite>
       <sprite>sprites\bear_menu</sprite>
+      <sprite>sprites\bear_jump</sprite>
     </sprites>
+    <sprite>sprites\collider3</sprite>
+    <sprite>sprites\gameOver</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Ocean</background>
@@ -57,6 +62,7 @@
     <script>scripts\throwSign.gml</script>
     <script>scripts\resetPlayers.gml</script>
     <script>scripts\stopObstacle.gml</script>
+    <script>scripts\bearAnim.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fTimer</font>
@@ -77,6 +83,9 @@
       <object>objects\foxMenu</object>
       <object>objects\start_button</object>
     </objects>
+    <object>objects\collision2</object>
+    <object>objects\collision3</object>
+    <object>objects\endScreen</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\main_menu</room>

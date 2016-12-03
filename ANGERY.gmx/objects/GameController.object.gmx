@@ -43,6 +43,12 @@ global.p2OriPosY = fox.y;
 global.Bar1 = 0;
 global.Bar2 = 0;
 
+global.i = 0;
+global.goReset = false;
+global.stopAnim = false;
+global.seconds2 = 1;
+
+
 resetPlayers();
 </string>
           </argument>
@@ -68,31 +74,96 @@ resetPlayers();
             <kind>1</kind>
             <string>//decrease time
 global.seconds -= 1/room_speed;
-output[2] = 0;
+output[2] = 0; 
 
-if(global.seconds &lt; 0.1) and (global.seconds &gt; 0){
+if(global.seconds &lt; 0.1) and (global.seconds &gt; 0)
+{
     output = fight(global.p1Input, global.p2Input);
-    global.p1Health = damage(global.p1Health, myAlgo(output[1]));
-    global.p2Health = damage(global.p2Health, myAlgo(output[0]));
+    global.p1Health = global.p1Health - myAlgo(output[1]);
+    global.p2Health = global.p2Health - myAlgo(output[0]);
     
-    if (isDead(global.p1Health) or isDead(global.p2Health)){
-        //trigger death animation and game over
-        room_goto(game_over); 
-    }else{
-        resetPlayers();
+   
+    if (isDead(global.p1Health) or isDead(global.p2Health))
+    {    
+        //trigger death animation and game over      
+        room_goto(game_over);   
+    } 
+   
+    global.seconds = 16;
+    
+}  
+
+else if(global.p1ComdCt == 2 and global.p2ComdCt == 2 and global.p1_isMoving == false and global.p2_isMoving == false and global.stopAnim == false)
+{
+
+    
+    if(global.i &gt; 2)
+    {
+      output = fight(global.p1Input, global.p2Input);
+      global.p1Health = damage(global.p1Health, myAlgo(output[1]));
+      global.p2Health = damage(global.p2Health, myAlgo(output[0]));
+      global.i = 0;
+      global.goReset = true;
     }
     
-} else if (global.p1ComdCt == 2 and global.p2ComdCt == 2){
-    output = fight(global.p1Input, global.p2Input);
-    global.p1Health = damage(global.p1Health, myAlgo(output[1]));
-    global.p2Health = damage(global.p2Health, myAlgo(output[0]));
+    if(global.p1Input[global.i] == 1)
+    { 
+      bear.sprite_index = bear_punch;
+    }
     
-    if (isDead(global.p1Health) or isDead(global.p2Health)){
+    if(global.p1Input[global.i] == 2)
+    {  
+     bear.sprite_index = bear_kick;
+    }
+    
+     if(global.p1Input[global.i] == 3)
+    {
+       bear.sprite_index = bear_smash;
+    }
+    
+     if(global.p2Input[global.i] == 1)
+   { 
+      fox.sprite_index = fox_zap;
+    }
+    
+    if(global.p2Input[global.i] == 2)
+    {  
+    fox.sprite_index = fox_kick;
+    }
+    
+     if(global.p2Input[global.i] == 3)
+    {
+       fox.sprite_index = fox_uppercut;
+    }
+    
+
+     global.seconds2 -= 1 / room_speed;
+    
+    if(global.seconds2 &lt; 0.1 and global.seconds2 &gt; 0){
+      global.i += 1;
+      global.seconds2 = 1;
+    }
+    
+   
+    
+   if (isDead(global.p1Health) or isDead(global.p2Health))
+    {
         //trigger death animation and game over
         room_goto(game_over); 
-    }else{
-        resetPlayers();
     }
+    
+   else
+   {
+     if(global.goReset == true)
+     {
+     global.stopAnim = true;
+     bear.sprite_index = bear_staticR;
+     fox.sprite_index = foxStaticLeft;
+     resetPlayers();
+     global.stopAnim = false;
+      }
+   }
+    
 }
 
 
